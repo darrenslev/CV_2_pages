@@ -1,0 +1,604 @@
+%
+% cv.tex
+%
+% Author: Darren Slevin
+%
+% Based heavily on resume.tex by
+% Jeremy B. R. Edberg <jedberg@gmail.com> http://www.jedberg.net
+% and Padraig O Conbhui
+
+
+%****************************************************************************%
+
+%
+% Basic setup
+%
+\documentclass[11pt]{article}
+
+\usepackage{kpfonts}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0in}
+\hyphenchar\font=-1
+
+\usepackage{geometry}
+\geometry{a4paper, twoside}
+\setstretch{1}
+
+\usepackage{booktabs}
+\usepackage{topcapt}
+%\raggedbottom
+%\raggedright
+\usepackage{tabulary}
+\usepackage{hyphenat}
+\usepackage{verbatim}
+
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+
+% dummy text
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\newenvironment{newparagraph}{\par\setlength{\rightskip}{3cm}}
+
+\usepackage{tabto}
+
+%\newcommand{\tab}[1]{%
+%\settowidth{\tabcont}{#1}%
+%\ifthenelse{\lengthtest{\tabcont < .25\linewidth}}%
+%{\makebox[.25\linewidth][l]{#1}\ignorespaces}%
+%{\makebox[.5\linewidth][l]{\color{red} #1}\ignorespaces}%
+%}%
+
+%*****************************************************************************%
+
+
+%
+% PDF setup
+%
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex]{hyperref}
+\else
+  \usepackage[hypertex]{hyperref}
+\fi
+\hypersetup{
+    letterpaper,
+    colorlinks,
+    urlcolor=black,
+    %pdfpagemode=none,
+    pdftitle={Resume},
+    pdfauthor={Padraig O Conbhui},
+    pdfsubject={Resume},
+    pdfkeywords={HPC, high performance computing, web development, physics}
+}
+
+
+%*****************************************************************************%
+
+
+%
+% Margin setup
+%
+\oddsidemargin -0.5in
+\evensidemargin -0.5in
+\textwidth 7.2in
+\headheight -0.7in
+\topmargin 0.0in
+\textheight= 10.7in
+%\footheight 1.0in
+
+
+%*****************************************************************************%
+
+
+%
+% Style setup
+%
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{\baselineskip}
+\usepackage{parskip}
+
+
+%*****************************************************************************%
+
+
+%
+% Custom commands
+%
+\newcommand{\resumeSection}[1]{
+    \par
+    \vspace{\baselineskip}
+    \large {\sc {#1}}
+    \par
+    \vspace{-0.9\baselineskip}
+    \hrulefill
+    \vspace{0.5\baselineskip}
+    \par
+}
+
+\newenvironment{resumeSubSectionHeader}{
+    \par
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \par
+} {
+    \end{tabular*}
+    \par
+}
+
+\newenvironment{resumeSubSectionBody}{
+    \par
+    \vspace{-0.8\parskip}
+    \begin{small}
+    \par
+} {
+    \par
+    \end{small}
+    \par
+}
+
+
+%*****************************************************************************%
+
+
+\begin{document}
+
+
+%*****************************************************************************%
+
+
+%
+% Heading
+%
+\begin{center}
+    { \huge \textbf \sc Darren Slevin}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+    d.slevin@ed.ac.uk & & Mobile: +44 7834786828\\
+    \hline\hline
+\end{tabular*}
+\end{center}
+
+%Personal Webpage: www.darrenslevin.com
+
+%*****************************************************************************%
+
+\resumeSection{Profile}
+I am currently a Postdoctoral Research Associate in Global Crop Yield Modelling. This project is a collaboration between the University of Edinburgh and Global Surface Intelligence (an Edinburgh-based data services 
+company). I possess a strong meteorology, 
+mathematics and computing background and decided to move into the atmospheric sciences field due to 
+undertaking a Global Environmental Change module while studying for my undergraduate 
+degree. My research interests include but are not limited to: land surface modelling, 
+model uncertainty, using large datasets, satellite data, understanding how climate 
+models work, high performance computing and teaching. 
+
+%*****************************************************************************%
+\resumeSection{Research Experience}
+
+%
+% University Of Edinburgh
+%
+\begin{resumeSubSectionHeader}
+
+	\textbf{University of Edinburgh} & Edinburgh, Scotland \\
+	 \emph{Postdoctoral Research Associate} & \emph{2016 to present} \\ 
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+	
+	\textbf{Project title:} Global Crop Yield Modelling\\
+	\textbf{Supervisor:} Prof. Mat Williams
+
+
+	\begin{itemize}
+    		\begin{newparagraph} 
+		\item Generating observational datasets of global crop yield for wheat, maize and sugar cane.
+		\item Processed-based modelling using the CARDAMOM framework.         
+		\end{newparagraph}	        
+            
+    \end{itemize}
+\end{resumeSubSectionBody}
+
+%
+% University Of Edinburgh
+%
+\begin{resumeSubSectionHeader}
+
+	\textbf{University of Edinburgh} & Edinburgh, Scotland \\
+	 \emph{Postdoctoral Research Associate} & \emph{2015 to 2016} \\ 
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+	
+	\textbf{Project title:} Carbon Cycle Processes in Permafrost Systems (CYCLOPS)\\
+	\textbf{Supervisor:} Prof. Mat Williams
+
+
+	\begin{itemize}
+    		\begin{newparagraph} 
+		\item Carbon cycle modelling at various study sites in the Canadian Arctic for the 
+		CYCLOPS project using the SPA-CYCLOPS ecosystem model.       
+		\end{newparagraph}	        
+            
+    \end{itemize}
+\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+\resumeSection{Education}
+
+%
+% University Of Edinburgh
+%
+\begin{resumeSubSectionHeader}
+
+    \textbf{University of Edinburgh} & Edinburgh, Scotland \\
+    \emph{PhD, Atmospheric and Environmental Sciences} & \emph{2011 to 2015} \\
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+		
+   	\textbf{Thesis title:} Investigating sources of uncertainty associated with the JULES land surface model.\\
+	\textbf{Supervisors:} Prof. Simon Tett and Prof. Mat Williams
+
+    %\begin{itemize}
+    		%\begin{newparagraph} 
+		%\item Evaluated the performance of the JULES land surface model at both site and global scales 
+		%using a range of observation and reanalysis datasets.
+		%\item Experience using global gridded meteorological datasets, such as WFDEI 
+        %and PRINCETON, and satellite data products, such as MODIS LAI and GPP. 
+		 
+		 %\item Explored and identified sources of uncertainty in the Joint UK Land Environment 
+		 %Simulator (JULES) land surface model when simulating Gross Primary Productivity (GPP) at 
+		 %various scales (point, regional and global).
+		 
+		 %\item Viva passed on 3\superscript{rd} November 2015.        
+        
+        %\item Evaluated the performance of the UK Met Office land surface model, JULES, for 
+        %both single-point and global simulations, using a range of observation and reanalysis datasets. 
+        %\item Installed and setup the JULES model in both serial and parallel mode on the Edinburgh
+        %University cluster (Edinburgh Compute and Data Facilities).
+        %\item Submitted model jobs to the University cluster using Grid engine scripts (qlogin, qsub, qstat, 
+        %qdel), for both serial and parallel model configurations.      
+        %\item Built and installed the necessary libraries (HDF5, netCDF4, parallel-netcdf, zlib, szip) for the 
+        %installation of JULES.
+        %\item Modifying the JULES code, which is written in Fortran 90, in order to drive 
+        %it with satellite data. 
+        %\item Experience using global gridded meteorological datasets, such as WFDEI 
+        %and PRINCETON, and satellite data products, such as MODIS LAI and GPP.    
+		%\item Analysing and comparing model output to observations
+		%\end{newparagraph}	        
+            
+    %\end{itemize}
+
+\end{resumeSubSectionBody}
+
+%
+% University College, Dublin
+% MSc, Meteorology
+%
+\begin{resumeSubSectionHeader}
+
+    \textbf{University College Dublin} & Dublin, Ireland \\
+    \emph{MSc, Meteorology} & \emph{2010 to 2011} \\
+    \emph{Grade: 1.1}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+	%\begin{newparagraph}
+	%One year course in meteorology and climate in which topics ranging from the 
+	%practical (Synoptic Meteorology) to the theoretical (Dynamic Meteorology) are studied.        
+	%\end{newparagraph}
+
+    \begin{description}
+    %    \item{\bf Subjects:}
+    %     	Dynamic Meteorology, Physical Meteorology, Climate Dynamics, Numerical Weather\\ 
+    %     	Prediction and Synoptic Meteorology.
+        %\item{\bf Field Trips:}
+        %		\begin{itemize}
+        	%		\item Valencia Observatory (Ireland) 
+        	%		\item Dorset Field Trip (UK)			
+		%	\end{itemize}	              
+        \item{\bf MSc dissertation:}
+			Storm modelling using the Weather Research and Forecasting (WRF) model         
+    \end{description}
+
+\end{resumeSubSectionBody}
+
+%
+% University College, Dublin
+% HDip, Mathematical Science
+%
+\begin{resumeSubSectionHeader}
+
+    \textbf{University College Dublin} & Dublin, Ireland \\
+    \emph{HDip, Mathematical Science} & \emph{2009 to 2010} \\
+    \emph{Grade: 2.1}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+
+	%\begin{newparagraph}
+	%One year course in which a range of topics in algebra and analysis were taught, in order to reach 
+	%a level of mathematical knowledge equivalent to that of a 4-year honours undergraduate programme.     
+	%\end{newparagraph}
+    %\begin{description}
+    %    \item{\bf Subjects:}
+    %  		Mathematical Analysis, Calculus of Several Variables, Linear Algebra, Group Theory,\\ 
+    %  		Field Theory, Ring Theory, Metric Spaces, Functional Analysis and Differential Geometry            
+    %\end{description}
+
+\end{resumeSubSectionBody}
+
+%
+% Trinity College Dublin
+% BA (Mod), Computer Science
+%
+%\newpage
+\begin{resumeSubSectionHeader}
+
+    \textbf{Trinity College Dublin} & Dublin, Ireland \\
+    \emph{BA (Mod), Computer Science} & \emph{2005 to 2009} \\
+    \emph{Grade: 1.1}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+	%\begin{newparagraph}
+    %Four year course in which the theory and practice of computer systems are taught, which included 
+    %%topics in mathematics, programming, microprocessors, digital logic, telecommunications, information 
+    %management, electronics and the role of computers in society. 
+	%\end{newparagraph}
+    \begin{description}
+    		\begin{newparagraph}	
+        %\item{\bf Subjects:}
+        %    Mathematics, Introduction to Programming, Introduction to Computing, 
+        %    Digital Logic Design, Electrotechnology, Telecommunications, Systems Programming, 
+        %    Concurrent Systems and Operating Systems, Computer Architecture, Symbolic Programming, 
+        %    Software Engineering, Compiler Design, Formal Methods, Information Management, Fuzzy Logic, 
+        %    Distributed Systems and Mobile Communications.
+           	   
+       	 \item{\bf Final Year dissertation:}
+			Modelling in Z 
+		 \end{newparagraph}    
+    \end{description}
+
+\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+\resumeSection{Work Experience}
+
+\begin{resumeSubSectionHeader}
+
+    \textbf{University of Edinburgh} & Edinburgh, Scotland \\
+    \emph{Tutor and Demonstrator} & \emph{2011 to 2015} \\
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+	%\begin{newparagraph}	
+	%I tutored and demonstrated for a variety of courses (ranging from 
+	%%1\superscript{st} year to MSc level) within the School of Geosciences during 
+	%the course of my PhD and Postdoctoral work. Responsibilities included assisting lecturers with 
+	%tutorials and practical work, leading tutorials, preparing computing tutorials, 
+	%marking course work, providing feedback to students and supervising exams. 
+	
+	%I delivered a lecture to 
+	%students on the Earth Modelling and Prediction 2 course. I designed and delivered an NCL tutorial 
+	%to students on the Introduction to 3-D Climate Modelling course.  
+	
+	%\end{newparagraph}
+	\begin{description}
+		\begin{newparagraph}	
+        \item{\bf Subjects taught:}
+            Earth Modelling and Prediction 1, Earth Modelling and Prediction 2, Meteorology: Weather and 
+            Climate, Meteorology: Atmosphere and Environment, Mathematical Methods for Geophysicists, 
+            Introduction to 3-D Climate Modelling, Object Oriented Software Engineering, 
+            Computational Modelling for Geosciences and Environmental Pollution.
+        \end{newparagraph}	         
+    \end{description}
+                    
+\end{resumeSubSectionBody}
+
+
+\begin{resumeSubSectionHeader}
+
+    \textbf{University College Dublin} & Dublin, Ireland \\
+    \emph{Mathematics Tutor} & \emph{2010 to 2011} \\
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+	%\begin{newparagraph}	
+	%I tutored for a number of mathematics courses (1\superscript{st} and 2\superscript{nd} year) within 
+	%the School of Mathematical Sciences and the School of Business while studying for my MSc. 
+	%Responsibilities included leading tutorials and marking course work. 
+	%\end{newparagraph}
+	\begin{description}
+		\begin{newparagraph}
+        \item{\bf Subjects taught:}	
+			Introduction to Calculus, Mathematics for Business, Combinatorics and Number Theory, 
+			Calculus, Calculus and Statistics, Matrices and Vectors, and Linear Algebra for Engineers.          
+        \end{newparagraph}	
+    \end{description}
+                    
+\end{resumeSubSectionBody}
+
+
+%\begin{resumeSubSectionHeader}
+
+%    \textbf{Trinity College Dublin} & Dublin, Ireland \\
+%    \emph{User Interface Design for Natural Language Processing Application} & \emph{July-Sept. 2009} \\
+
+%\end{resumeSubSectionHeader}
+%\begin{resumeSubSectionBody}
+%		\begin{newparagraph}	
+%        I designed and implemented a Graphical User Interface (GUI) in Java for an Enterprise Ireland-funded Language Application.
+%        \end{newparagraph}	   
+                    
+%\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+\resumeSection{Scholarships and Awards}
+%
+% Awards
+%
+\begin{resumeSubSectionHeader}
+
+   \textbf{Awards}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+
+    \begin{itemize}
+		\item Recipient of the Victor W. Graham Prize in 2006
+			\begin{itemize}
+				\item Highest mark in Mathematics in Junior Freshman Computer Science Summer exams
+			\end{itemize}        
+        \item Several book prizes for results in Computer Science Summer exams.
+    \end{itemize}
+
+\end{resumeSubSectionBody}
+
+\begin{resumeSubSectionHeader}
+
+    \textbf{Scholarships}
+
+\end{resumeSubSectionHeader}
+\begin{resumeSubSectionBody}
+
+    \begin{itemize}
+		\item School Scholarship awarded by the School of GeoSciences, University of Edinburgh.  
+    \end{itemize}
+
+\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+%\newpage
+\resumeSection{Skills Profile}
+\begin{resumeSubSectionBody}
+\begin{description}
+	\begin{newparagraph}	
+	\item{\bf Meteorology:}
+		From my MSc, I have gained an in-depth understanding of the theoretical and practical 
+		aspects of meteorology, including how climate models work. During my PhD and Postdoctoral 
+		research, I have furthermore developed my skills in land surface modelling, dealing 
+		with large datasets and interpreting results from model simulations.	  
+    \item{\bf Mathematics:} 
+		From my HDip, I acquired a broad overview of pure mathematics which allowed me to 
+		understand the mathematics behind atmospheric processes while studying for my MSc. 
+		Explaining mathematical concepts to students during the course of my teaching has also 
+		allowed me to further develop my mathematical knowledge. 
+   \item{\bf Computing:}
+   		During the course of my computing degree, I acquired a detailed knowledge of computer hardware 
+    		and software. Programming languages studied include Java, C, C++, Prolog and SQL. During the 
+    		course of my PhD and Postdoctoral research, I have programmed in Python, NCL, Fortran, CDO/NCO 
+    		and shell scripting (bash). I extensively use the Linux operating system and \LaTeX/Beamer. 
+    		I also have experience of using the FCM make build system and the software versioning and 
+    		revision control system SVN.    		
+      	\end{newparagraph}		            
+\end{description}
+\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+\resumeSection{Publications}
+\begin{resumeSubSectionBody}
+\begin{itemize}
+	\begin{newparagraph}	
+	\item D. Slevin, S.F.B. Tett and M. Williams, `Multi-site evaluation of the JULES land surface model using 
+	global and local data', Geoscientific Model Development, 8, 295-316, doi:10.5194/gmd-8-295-2015, 2015.
+	
+	\item D. Slevin, S.F.B. Tett, J.-F. Exbrayat, A. A. Bloom and M. Williams, `Global Evaluation of Gross Primary Productivity in the JULES Land Surface Model', Geoscientific Model Development Discussions, doi:10.5194/gmd-2016-214, in review, 2016. 
+	\end{newparagraph}
+	
+	%\begin{newparagraph}
+	
+	%\end{newparagraph}	
+		
+\end{itemize}
+\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+%\resumeSection{Academic activities}
+
+%\begin{resumeSubSectionBody}
+%\begin{itemize}
+%	\begin{newparagraph}
+%	\item Participation in a 3 day workshop on `Understanding Uncertainty in Environmental 
+%	Modelling' at the Centre for the Analysis of Time Series, London School of 
+%	Economics (January 2015)
+%	\item Participation in and poster presentation at the 13\superscript{th} International Swiss 
+%	Climate Summer School organised by the University of Bern (Grindelwald, Switzerland, September 2014) 
+%	\item Poster presentation at the JULES Summer meeting (Leicester University, July 2014)  
+%	\item Participation in a 2 day ESA (European Space Agency) sponsored Land Data Assimilation 
+%	workshop (University College London, March 2014)     
+%	\item Oral presentation for the Contemporary Climate Research Group (Edinburgh University, December 2013)
+%	\item Oral presentation at the JULES Summer meeting (Edinburgh University, June 2013)
+%	\item Participation in a 1 day teaching course organised by the Higher Education 
+%	Academy (HEA) (Edinburgh, March 2013)  
+%%	\item Poster presentation and Session Chair at the Geosciences Annual Gradschool 
+%	Conference (Edinburgh University, January 2013)
+%	\item Participation in the JULES Winter meeting (Exeter University, December 2012)  
+%	\item Participation in the NCEO/CEOI Joint Science Conference (Nottingham University, September 2012)	
+%	\item Oral presentation at the Geosciences Postgraduate Research Conference (Edinburgh 
+%	University, March 2012)
+%	\item Oral presentation at the Geosciences Annual Gradschool Conference (Edinburgh University, January 2012)
+%	\item Participation in the JULES Winter meeting (Reading University, January 2012)
+%	\end{newparagraph}	   
+%\end{itemize}
+%\end{resumeSubSectionBody}	
+
+
+
+%*****************************************************************************%
+%\newpage
+%\resumeSection{Other activities of interest}
+
+%\begin{resumeSubSectionBody}	
+%\begin{itemize}
+%	\begin{newparagraph}	
+%	\item During my PhD, I organised the weekly climate reading group for PhD students and 
+%	Postdocs of Profs Simon Tett and Gabi Hegerl.
+%	\item I was the Communications Officer for the Geosciences Graduate School Committee in the 
+%	second year of my PhD.	
+%	\item I am currently studying Arabic as part of the Languages for All programme at 
+%	Edinburgh University (This is my 4\superscript{th} year).
+%	\item In my free time, I enjoy reading, hiking, camping, going to the gym, cross-country skiing and 
+%travelling (36 countries). I recently completed a Winter Skills course in the Cairngorm Mountains (Scotland).
+%	\item I hold a full clean UK driving licence.
+%	\end{newparagraph}	     
+%\end{itemize}
+%\end{resumeSubSectionBody}	
+
+%*****************************************************************************%
+%\resumeSection{References}
+%\begin{resumeSubSectionBody}
+
+%References can be supplied upon request.
+
+%\textbf{Professor Simon Tett}, \tab{\textbf{Professor Mathew Williams}},\\ 
+%Professor of Earth System Dynamics, \tab{Chair of Global Change Ecology},\\
+%University of Edinburgh, \tab{Head of Global Change Research Institute},\\
+%School of Geosciences, \tab{University of Edinburgh},\\
+%Crew Building, \tab{School of GeoSciences},\\
+%Alexander Crum Brown Road, \tab{Crew Building},\\   
+%Edinburgh, \tab{Alexander Crum Brown Road},\\ 
+%EH9 3FF. \tab{Edinburgh},\\
+%e-mail: simon.tett@ed.ac.uk \tab{EH9 3FF}.\\ 
+%\tab{\tab{e-mail: mat.williams@ed.ac.uk}}\\
+
+%\textbf{Professor J. Ray Bates},\\
+%Adjunct Professor of Meteorology,\\
+%Meteorology and Climate Centre,\\
+%School of Mathematical Sciences,\\ 
+%University College Dublin,\\ 
+%%Belfield,\\ 
+%Dublin 4,\\
+%Ireland.\\
+%e-mail: ray.bates@ucd.ie
+
+%\end{resumeSubSectionBody}
+
+%*****************************************************************************%
+
+\end{document}
